@@ -6,8 +6,8 @@ BASE_URL_COMPONENT_1 = "https://reelgood.com/source/"
 BASE_URL_COMPONENT_3 = "?filter-sort=4&offset="
 config = {
     'user': 'root',
-    'password': 'neal2master@#@',
-    'host': '35.239.147.239',
+    'password': '##########',
+    'host': '##.###.###.###',
     'client_flags': [ClientFlag.SSL],
     'ssl_ca': 'ssl/server-ca.pem',
     'ssl_cert': 'ssl/client-cert.pem',
