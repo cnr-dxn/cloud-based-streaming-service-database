@@ -1,0 +1,43 @@
+objective: be able to punch in a title and have it return all streaming services (or none) the title is on
+brain dump:
+ - link to sql/mongoDB with title, rating (either IMDB or RT), year it came out, and streaming services its located on (4)
+ - one giant scanning funciton, which scans each streaming service and puts it into it's own database (thinking mongo...)
+ - runs off raspberry pi, updating every morning, must upload to a database in the cloud
+ - much later, link to website so i can do it anywhere
+ - doing in python, gotta be easier, and good practice with python
+issues:
+ - how to link database to program
+ - how to connect all to website (might need to do first)
+ - make sure website in question can be accessed and scraped by beautifulsoup
+ - how to identify which elements are which from website
+reasons not to just donwload app:
+ - practice
+ - more reliable
+ - UI practice (maybe)
+ - practice
+
+3 tables
+ - movies/tvs
+ - junction
+ - streaming services
+to insert
+ - replace (insert if not already existing) into table should it be absent
+ - insert instance (movie key, streaming key, time stamp)
+   - time stamp so we dont have to remove titles out of the library
+     - one sub query? two sub queries? something like that
+to insert exactly
+ - select if exists (either using hashing the whole row or index i guess)
+ - if so, dont insert
+ - if yes, insert
+to insert junction
+ - use epoch time
+
+ - deleted first two lines, 
+ - got rid of all not nulls
+
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE
+);
